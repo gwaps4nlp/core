@@ -1,0 +1,16 @@
+@extends('back.template')
+
+@section('content')
+
+<h1>Edit constant game</h1>
+{!! Form::open(['url' => 'constant-game/edit/'.$constant->id, 'method' => 'post', 'role' => 'form']) !!}
+	<div class="form-group  ">
+		<label for="value" class="control-label">Key</label>
+		<input class="form-control" type="text" value="{{ $constant->key }}" disabled="disabled"/>
+	</div>
+	{!! Form::control('text', 0, 'value', $errors, 'Value',$constant->value) !!}
+	{!! Form::control('textarea', 0, 'description', $errors, 'Description de la constante',$constant->description) !!}
+
+	<input type="submit" value="Save" class="btn btn-success" />
+{!! Form::close() !!}
+@stop
