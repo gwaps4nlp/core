@@ -1,9 +1,9 @@
 <?php
 
-namespace Gwaps4nlp\Models;
+namespace Gwaps4nlp\Core\Models;
 
-use Gwaps4nlp\Models\Corpus;
-use Gwaps4nlp\Models\Source;
+use Gwaps4nlp\Core\Models\Corpus;
+use Gwaps4nlp\Core\Models\Source;
 use Illuminate\Database\Eloquent\Model;
 use DB;
 
@@ -19,7 +19,7 @@ class Sentence extends Model
 	 */
 	public function corpus()
 	{
-		return $this->belongsTo('Gwaps4nlp\Models\Corpus');
+		return $this->belongsTo('Gwaps4nlp\Core\Models\Corpus');
 	}
 
 }

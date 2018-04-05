@@ -1,10 +1,10 @@
 <?php
 
-namespace Gwaps4nlp\Repositories;
+namespace Gwaps4nlp\Core\Repositories;
 
-use Gwaps4nlp\Models\User;
-use Gwaps4nlp\Models\Role;
-use Gwaps4nlp\Repositories\BaseRepository;
+use Gwaps4nlp\Core\Models\User;
+use Gwaps4nlp\Core\Models\Role;
+use Gwaps4nlp\Core\Repositories\BaseRepository;
 use DB;
 
 class UserRepository extends BaseRepository

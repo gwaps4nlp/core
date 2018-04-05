@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

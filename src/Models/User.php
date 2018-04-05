@@ -1,8 +1,8 @@
 <?php
 
-namespace Gwaps4nlp\Models;
+namespace Gwaps4nlp\Core\Models;
 
-use Gwaps4nlp\Models\Role;
+use Gwaps4nlp\Core\Models\Role;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -34,7 +34,7 @@ class User extends Authenticatable
      */
 	public function roles()
 	{
-		return $this->belongsToMany('Gwaps4nlp\Models\Role');
+		return $this->belongsToMany('Gwaps4nlp\Core\Models\Role');
 	}
 
 	/**
@@ -88,7 +88,7 @@ class User extends Authenticatable
 	 */
 	public function trophies()
 	{
-		return $this->belongsToMany('Gwaps4nlp\Models\Trophy');
+		return $this->belongsToMany('Gwaps4nlp\Core\Models\Trophy');
 	}
 
 	/**

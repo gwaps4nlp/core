@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwaps4nlp\Exceptions;
+namespace Gwaps4nlp\Core\Exceptions;
 
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

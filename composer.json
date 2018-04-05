@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gwaps4nlp\\": "src/"
+            "Gwaps4nlp\\Core\\": "src/"
         }
     },
     "extra": {
@@ -23,8 +23,8 @@
         },
         "laravel": {
             "providers": [
-                "Gwaps4nlp\\GameServiceProvider",
-                "Gwaps4nlp\\CoreServiceProvider"
+                "Gwaps4nlp\\Core\\GameServiceProvider",
+                "Gwaps4nlp\\Core\\CoreServiceProvider"
             ]
         }
     },

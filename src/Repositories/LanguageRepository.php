@@ -1,8 +1,8 @@
 <?php
 
-namespace Gwaps4nlp\Repositories;
+namespace Gwaps4nlp\Core\Repositories;
 
-use Gwaps4nlp\Models\Language;
+use Gwaps4nlp\Core\Models\Language;
 use DB;
 use Config;
 

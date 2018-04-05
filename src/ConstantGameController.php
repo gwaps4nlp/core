@@ -1,8 +1,8 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
-use App\Http\Controllers\Controller;
+use Gwaps4nlp\Controller;
 use Gwaps4nlp\Models\ConstantGame;
 use Illuminate\Http\Request;
 use Cache;

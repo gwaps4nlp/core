@@ -1,6 +1,6 @@
 <?php 
 
-namespace Gwaps4nlp\Repositories;
+namespace Gwaps4nlp\Core\Repositories;
 
 abstract class BaseRepository {
 

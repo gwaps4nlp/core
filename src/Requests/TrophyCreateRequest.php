@@ -1,6 +1,6 @@
 <?php 
 
-namespace Gwaps4nlp\Requests;
+namespace Gwaps4nlp\Core\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

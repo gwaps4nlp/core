@@ -1,11 +1,11 @@
 <?php
 
-namespace Gwaps4nlp\Scopes;
+namespace Gwaps4nlp\Core\Scopes;
 
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Gwaps4nlp\Models\Language;
+use Gwaps4nlp\Core\Models\Language;
 use App;
 
 class LanguageScope implements Scope

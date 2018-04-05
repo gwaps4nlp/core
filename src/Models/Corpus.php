@@ -1,10 +1,10 @@
 <?php
 
-namespace Gwaps4nlp\Models;
+namespace Gwaps4nlp\Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
-use App\Models\Sentence;
+use Gwaps4nlp\Core\Models\Sentence;
 
 class Corpus extends Model
 {
@@ -31,7 +31,7 @@ class Corpus extends Model
 	 */
 	public function sentences()
 	{
-	  return $this->hasMany('Gwaps4nlp\Models\Sentence')->whereIn('corpus_id', array_merge([$this->id],$this->subcorpora->pluck('id')->toArray()));
+	  return $this->hasMany('Gwaps4nlp\Core\Models\Sentence')->whereIn('corpus_id', array_merge([$this->id],$this->subcorpora->pluck('id')->toArray()));
 	}	
 
 	/**
@@ -45,23 +45,13 @@ class Corpus extends Model
 	}
 
 	/**
-	 * One to Many relation
-	 *
-	 * @return Illuminate\Database\Eloquent\Relations\BelongsToMany
-	 */
-	public function subcorpora()
-	{
-	  return $this->belongsToMany('Gwaps4nlp\Models\Corpus','corpus_subcorpus','corpus_id','subcorpus_id');
-	}
-
-	/**
 	 * One to One relation
 	 *
 	 * @return Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
 	public function language()
 	{
-	  return $this->belongsTo('Gwaps4nlp\Models\Language');
+	  return $this->belongsTo('Gwaps4nlp\Core\Models\Language');
 	}
 
 	/**
@@ -71,7 +61,7 @@ class Corpus extends Model
 	 */
 	public function license()
 	{
-	  return $this->belongsTo('Gwaps4nlp\Models\License');
+	  return $this->belongsTo('Gwaps4nlp\Core\Models\License');
 	}
 
 	/**
@@ -81,7 +71,7 @@ class Corpus extends Model
 	 */
 	public function source()
 	{
-	  return $this->hasOne('Gwaps4nlp\Models\Source');
+	  return $this->hasOne('Gwaps4nlp\Core\Models\Source');
 	}
 
 }

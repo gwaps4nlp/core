@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwaps4nlp\Models;
+namespace Gwaps4nlp\Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Cache;

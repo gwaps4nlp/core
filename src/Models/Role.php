@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwaps4nlp\Models;
+namespace Gwaps4nlp\Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,6 +19,6 @@ class Role extends Model
      */
     public function users()
     {
-        return $this->belongsToMany('Gwaps4nlp\Models\User');
+        return $this->belongsToMany('Gwaps4nlp\Core\Models\User');
     }    
 }

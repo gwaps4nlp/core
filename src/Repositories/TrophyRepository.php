@@ -1,8 +1,8 @@
 <?php
 
-namespace Gwaps4nlp\Repositories;
+namespace Gwaps4nlp\Core\Repositories;
 
-use Gwaps4nlp\Models\Trophy;
+use Gwaps4nlp\Core\Models\Trophy;
 
 class TrophyRepository extends BaseRepository
 {
@@ -10,7 +10,7 @@ class TrophyRepository extends BaseRepository
 	/**
 	 * Create a new TrophyRepository instance.
 	 *
-	 * @param  Gwaps4nlp\Models\Trophy $trophy
+	 * @param  Gwaps4nlp\Core\Models\Trophy $trophy
 	 * @return void
 	 */
 	public function __construct(

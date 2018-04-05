@@ -1,12 +1,12 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
-use Gwaps4nlp\Models\ConstantGame;
-use Gwaps4nlp\Models\Corpus;
-use Gwaps4nlp\Models\Source;
-use Gwaps4nlp\GameGestionInterface;
-use Gwaps4nlp\Exceptions\GameException;
+use Gwaps4nlp\Core\Models\ConstantGame;
+use Gwaps4nlp\Core\Models\Corpus;
+use Gwaps4nlp\Core\Models\Source;
+use Gwaps4nlp\Core\GameGestionInterface;
+use Gwaps4nlp\Core\Exceptions\GameException;
 use Illuminate\Http\Request;
 use Response, View, App, Auth;
 
@@ -22,7 +22,7 @@ class GameController extends Controller
      */
     public function __construct()
     {
-		$this->game = App::make('Gwaps4nlp\GameGestionInterface');
+		$this->game = App::make('Gwaps4nlp\Core\GameGestionInterface');
     }
 
     /**

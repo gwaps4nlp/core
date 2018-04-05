@@ -1,11 +1,11 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Gwaps4nlp\Models\Trophy;
-use Gwaps4nlp\Models\Bonus;
+use Gwaps4nlp\Core\Models\Trophy;
+use Gwaps4nlp\Core\Models\Bonus;
 
 use Response, View, DB, Auth;
 

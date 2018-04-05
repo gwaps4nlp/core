@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
@@ -23,7 +23,7 @@ class GameServiceProvider extends ServiceProvider
         $config =  [
             'middleware' => ['web'],
         ];
-        $config['namespace'] = 'Gwaps4nlp';
+        $config['namespace'] = 'Gwaps4nlp\Core';
         $config['prefix'] = 'constant-game';
 
         $router->group($config, function($router)
@@ -56,7 +56,7 @@ class GameServiceProvider extends ServiceProvider
         $game_modes = Config::get('game.modes');
         $className = (array_key_exists($game_mode,$game_modes))?Config::get("game.modes.".$game_mode.".class_name"):'Game';
         $serviceName = 'App\Services\\'.$className.'Gestion';
-        $this->app->bind('Gwaps4nlp\GameGestionInterface', $serviceName);
+        $this->app->bind('Gwaps4nlp\Core\GameGestionInterface', $serviceName);
     }
 
     /**
@@ -66,7 +66,7 @@ class GameServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['Gwaps4nlp\GameGestionInterface'];
+        return ['Gwaps4nlp\Core\GameGestionInterface'];
     }
  
 }

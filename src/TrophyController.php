@@ -1,10 +1,10 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\TrophyCreateRequest;
-use App\Models\Trophy;
+use Gwaps4nlp\Core\Controller;
+use Gwaps4nlp\Core\Requests\TrophyCreateRequest;
+use Gwaps4nlp\Core\Models\Trophy;
 use Illuminate\Http\Request;
 
 class TrophyController extends Controller

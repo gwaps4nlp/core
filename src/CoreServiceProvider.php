@@ -1,6 +1,6 @@
 <?php
 
-namespace Gwaps4nlp;
+namespace Gwaps4nlp\Core;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
