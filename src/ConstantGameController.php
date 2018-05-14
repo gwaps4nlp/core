@@ -2,8 +2,8 @@
 
 namespace Gwaps4nlp\Core;
 
-use Gwaps4nlp\Controller;
-use Gwaps4nlp\Models\ConstantGame;
+use Gwaps4nlp\Core\Controller;
+use Gwaps4nlp\Core\Models\ConstantGame;
 use Illuminate\Http\Request;
 use Cache;
 

@@ -26,7 +26,7 @@ class CoreServiceProvider extends ServiceProvider
         $config =  [
             'middleware' => ['web','auth','admin'],
         ];
-        $config['namespace'] = 'Gwaps4nlp';
+        $config['namespace'] = 'Gwaps4nlp\Core';
         $config['prefix'] = 'constant-game';
 
         $router->group($config, function($router)
