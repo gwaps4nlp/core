@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-use App\Models\License;
+use Gwaps4nlp\Core\Models\License;
 
 class CreateLicensesTable extends Migration
 {
@@ -28,7 +28,7 @@ class CreateLicensesTable extends Migration
             'image' => 'logos/by-nc-sa.svg',
             'url' => ''
         ]);
-        
+
         License::create([
             'label' => 'CC BY-SA',
             'slug' => 'by-sa',
@@ -49,14 +49,14 @@ class CreateLicensesTable extends Migration
             'image' => 'logos/gpl.svg',
             'url' => ''
         ]);
-        
+
         Schema::table('corpuses', function ($table) {
             $table->integer('license_id')->unsigned()->after('source_id')->default(1);
             $table->foreign('license_id')
                 ->references('id')
                 ->on('licenses')
                 ->onDelete('restrict')
-                ->onUpdate('restrict');    
+                ->onUpdate('restrict');
         });
 
     }
@@ -69,8 +69,8 @@ class CreateLicensesTable extends Migration
     public function down()
     {
         Schema::table('corpuses', function ($table) {
-            $table->dropForeign(['license_id']);    
-        });        
+            $table->dropForeign(['license_id']);
+        });
         Schema::drop('licenses');
     }
 }

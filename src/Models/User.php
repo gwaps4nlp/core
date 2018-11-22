@@ -29,22 +29,12 @@ class User extends Authenticatable
 
     /**
      * The roles that belong to the user.
-     * 
+     *
      * @return Illuminate\Database\Eloquent\Relations\belongsToMany
      */
 	public function roles()
 	{
 		return $this->belongsToMany('Gwaps4nlp\Core\Models\Role');
-	}
-
-	/**
-	 * One to One relation
-	 *
-	 * @return Illuminate\Database\Eloquent\Relations\hasOne
-	 */
-	public function level()
-	{
-		return $this->belongsTo('App\Models\Level');
 	}
 
 	/**
@@ -54,33 +44,14 @@ class User extends Authenticatable
 	 */
 	public function bonuses()
 	{
-		return $this->belongsToMany('App\Models\Bonus');
+		return $this->belongsToMany('Gwaps4nlp\Core\Models\Bonus');
 	}
-	
-	/**
-	 * Many to Many relation
-	 *
-	 * @return Illuminate\Database\Eloquent\Relations\belongToMany
-	 */
-	public function objects()
-	{
-		return $this->belongsToMany('App\Models\Object');
-	}	
-	/**
-	 * Many to Many relation
-	 *
-	 * @return Illuminate\Database\Eloquent\Relations\belongToMany
-	 */
-	public function messages()
-	{
-		return $this->belongsToMany('App\Models\Message');
-	}	
 
-    public function getNextLevelAttribute()
+  public function getNextLevelAttribute()
     {
         return $this->level->getNext();
     }
-				
+
 	/**
 	 * Many to Many relation
 	 *
@@ -89,16 +60,6 @@ class User extends Authenticatable
 	public function trophies()
 	{
 		return $this->belongsToMany('Gwaps4nlp\Core\Models\Trophy');
-	}
-
-	/**
-	 * One to Many relation
-	 *
-	 * @return Illuminate\Database\Eloquent\Relations\hasMany
-	 */
-	public function stats()
-	{
-		return $this->hasMany('App\Models\Stat');
 	}
 
 	/**
@@ -155,7 +116,7 @@ class User extends Authenticatable
 	{
 		return $this->role->slug != 'user' && $this->role->slug == 'admin';
 	}
-	
+
 	public function hasTrophy($trophy)
 	{
 		return $this->trophies->contains('id', $trophy->id);
