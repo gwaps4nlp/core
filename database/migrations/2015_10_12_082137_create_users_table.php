@@ -35,8 +35,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->softDeletes();
 
-            $table->foreign('role_id')->references('id')->on('roles');
-
         });
     }
 
@@ -47,9 +45,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function ($table) {
-            $table->dropForeign(['role_id']);   
-        });         
         Schema::drop('users');
     }
 }
