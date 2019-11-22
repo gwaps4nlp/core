@@ -51,6 +51,7 @@ class ConstantGameController extends Controller
 			'value' => 'required|max:50',
 			'description' => 'required|max:200',
 		]);
+        
 		$constant->value=$request->value;
 		$constant->description=$request->description;
 		$constant->save();
