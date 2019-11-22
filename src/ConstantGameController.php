@@ -54,7 +54,6 @@ class ConstantGameController extends Controller
 		$constant->value=$request->value;
 		$constant->description=$request->description;
 		$constant->save();
-		ConstantGame::forget($constant->key);
         return $this->getIndex();
     }
 
