@@ -11,7 +11,7 @@ class ConstantGame extends Model
 	
 	public static function get($key){
 		try {
-			return Cache::rememberForever(App::environment().'-'.$key, function() use ($key) {
+			return Cache::rememberForever(config('app.name').'-'.$key, function() use ($key) {
 				return parent::select('value')->where('key','=',$key)->first()->value;
 			});
 		} catch (Exception $Ex){
@@ -23,12 +23,12 @@ class ConstantGame extends Model
         $constant = ConstantGame::where('key',$key)->first();
         $constant->value=$value;
         $constant->save();
-        ConstantGame::forget($constant->key);
+        ConstantGame::forget(config('app.name').'-'.$constant->key);
 	}
 
 	public static function forget($key){
 
-		Cache::forget(App::environment().'-'.$key);
+		Cache::forget(config('app.name').'-'.$key);
 
 	}
 }
